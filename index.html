@@ -148,7 +148,7 @@
         <label>Content Type:</label>
         <select name="content_type" class="contentTypeSelect">
           <option value="string">string</option>
-          <option value="icons">icons</option>
+          <option value="icon">icon</option>
         </select><br/>
 
         <!-- Container for content input -->
@@ -260,14 +260,14 @@
           }
           contentObj.text = contentInput.value.trim();
         } else {
-          // icons
+          // icon
           const iconSelect = bDiv.querySelector('select[name="button_content_icon"]');
           if (!iconSelect || !iconSelect.value.trim()) {
             showError("An icon must be selected.");
             return;
           }
           // Use the 'icons' key instead of 'text'
-          contentObj.icons = iconSelect.value;
+          contentObj.icon = iconSelect.value;
         }
 
         if (!title) {
